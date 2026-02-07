@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Loading Complete</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  </head>
+  <body data-task-id="{{ task_id }}">
+    <main class="page">
+      <section class="card">
+        <header class="card-header">
+          <p class="eyebrow">RAG Document Loader</p>
+          <h1>Loading Complete</h1>
+          <p class="subtle" id="result-summary">Summary will appear shortly.</p>
+        </header>
+
+        <section class="summary" id="summary-block"></section>
+
+        <section class="documents">
+          <div class="documents-header">
+            <h2>Documents Loaded</h2>
+            <div class="actions">
+              <button class="button secondary" id="show-all">Show All</button>
+              <a class="button secondary" id="download-json" href="#">Download JSON</a>
+              <button class="button" disabled>Next Step</button>
+            </div>
+          </div>
+          <div id="documents-list" class="documents-list"></div>
+        </section>
+
+        <section class="errors">
+          <h2>Errors & Warnings</h2>
+          <ul id="errors-list" class="errors-list"></ul>
+        </section>
+      </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  </body>
+</html>

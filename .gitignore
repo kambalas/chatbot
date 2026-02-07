@@ -1,0 +1,62 @@
+# ===============================
+# Python
+# ===============================
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Environment variables
+.env
+
+# Packaging / builds
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# Testing / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# ===============================
+# macOS
+# ===============================
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# macOS folders
+.Trashes
+.Spotlight-V100
+.fseventsd
+
+# ===============================
+# IDEs / Editors
+# ===============================
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ===============================
+# Logs
+# ===============================
+*.log
+
+# ===============================
+# Optional (uncomment if used)
+# ===============================
+# poetry.lock
+# Pipfile.lock
+# .python-version

@@ -1,0 +1,250 @@
+:root {
+  --ink: #1f1b16;
+  --muted: #5c5348;
+  --accent: #2f6f67;
+  --accent-2: #b9732f;
+  --card: #fffaf0;
+  --border: #e2d7c7;
+  --shadow: 0 20px 60px rgba(31, 27, 22, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Avenir Next", "Trebuchet MS", "Segoe UI", sans-serif;
+  color: var(--ink);
+  background: linear-gradient(135deg, #f3ebe1 0%, #e9f1ea 50%, #f8efe6 100%);
+  min-height: 100vh;
+}
+
+.page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  padding: 32px;
+}
+
+.card-header h1 {
+  margin: 0 0 8px;
+  font-size: 2rem;
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.subtle {
+  color: var(--muted);
+  margin: 0;
+}
+
+.form {
+  margin-top: 24px;
+  display: grid;
+  gap: 16px;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+}
+
+.field input,
+.field select {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  font-size: 1rem;
+}
+
+.options {
+  display: grid;
+  gap: 8px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--muted);
+}
+
+.button {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 999px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(47, 111, 103, 0.2);
+}
+
+.button.secondary {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--ink);
+}
+
+.formats {
+  margin-top: 32px;
+}
+
+.format-list {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0;
+  display: grid;
+  gap: 6px;
+  color: var(--muted);
+}
+
+.progress {
+  margin-top: 24px;
+}
+
+.progress-bar {
+  height: 14px;
+  background: #efe6d7;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  transition: width 0.3s ease;
+}
+
+.progress-meta {
+  margin-top: 8px;
+  color: var(--muted);
+}
+
+.status-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.label {
+  margin: 0 0 6px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.value {
+  margin: 0;
+  font-weight: 600;
+}
+
+.activity {
+  margin-top: 28px;
+}
+
+.activity-list,
+.errors-list {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0;
+  display: grid;
+  gap: 8px;
+}
+
+.activity-list li,
+.errors-list li {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #fff;
+}
+
+.documents {
+  margin-top: 28px;
+}
+
+.documents-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.documents-list {
+  margin-top: 16px;
+  display: grid;
+  gap: 12px;
+}
+
+.document-card {
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: #fff;
+}
+
+.document-card h3 {
+  margin: 0 0 6px;
+  font-size: 1rem;
+}
+
+.document-meta {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin: 0 0 6px;
+}
+
+.document-preview {
+  margin: 0;
+  color: var(--ink);
+}
+
+.errors {
+  margin-top: 28px;
+}
+
+.error {
+  color: #9e2a2b;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  .card {
+    padding: 24px;
+  }
+
+  .card-header h1 {
+    font-size: 1.6rem;
+  }
+}

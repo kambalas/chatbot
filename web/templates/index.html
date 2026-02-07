@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RAG Document Loader</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="card">
+        <header class="card-header">
+          <p class="eyebrow">RAG Document Loader</p>
+          <h1>Select Directory to Process</h1>
+          <p class="subtle">Load local documents into the system for later chunking and retrieval.</p>
+        </header>
+
+        <form id="load-form" class="form">
+          <label class="field">
+            <span>Directory Path</span>
+            <input
+              type="text"
+              name="directory"
+              id="directory-input"
+              placeholder="/path/to/selected/dir"
+              required
+            />
+          </label>
+
+          <div class="options">
+            <label class="checkbox">
+              <input type="checkbox" name="recursive" checked />
+              <span>Recursive (scan all subdirectories)</span>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" name="show_progress" checked />
+              <span>Show progress</span>
+            </label>
+          </div>
+
+          <label class="field">
+            <span>Max Workers</span>
+            <select name="max_workers" id="max-workers">
+              <option value="2">2</option>
+              <option value="4" selected>4</option>
+              <option value="6">6</option>
+              <option value="8">8</option>
+            </select>
+          </label>
+
+          <button type="submit" class="button">Load Documents</button>
+          <p id="form-error" class="error hidden"></p>
+        </form>
+
+        <section class="formats">
+          <h2>Supported Formats</h2>
+          <ul class="format-list">
+            <li>Markdown (.md)</li>
+            <li>PDF (.pdf)</li>
+            <li>Word (.docx, .doc)</li>
+            <li>Excel (.xlsx, .xls)</li>
+            <li>Text (.txt)</li>
+            <li>CSV (.csv)</li>
+            <li>HTML (.html, .htm)</li>
+            <li>PowerPoint (.pptx)</li>
+            <li>JSON (.json)</li>
+          </ul>
+        </section>
+      </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  </body>
+</html>

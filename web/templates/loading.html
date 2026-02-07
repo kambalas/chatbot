@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Loading Documents</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  </head>
+  <body data-task-id="{{ task_id }}">
+    <main class="page">
+      <section class="card">
+        <header class="card-header">
+          <p class="eyebrow">RAG Document Loader</p>
+          <h1>Loading Documents...</h1>
+          <p class="subtle" id="loading-directory">Directory: <span>--</span></p>
+        </header>
+
+        <div class="progress">
+          <div class="progress-bar">
+            <div class="progress-fill" id="progress-fill"></div>
+          </div>
+          <div class="progress-meta" id="progress-meta">0 / 0 files</div>
+        </div>
+
+        <div class="status-grid">
+          <div>
+            <p class="label">Current</p>
+            <p class="value" id="current-file">--</p>
+          </div>
+          <div>
+            <p class="label">Loaded</p>
+            <p class="value" id="loaded-count">0</p>
+          </div>
+          <div>
+            <p class="label">Failed/Skipped</p>
+            <p class="value" id="failed-count">0</p>
+          </div>
+        </div>
+
+        <section class="activity">
+          <h2>Recent Activity</h2>
+          <ul id="activity-list" class="activity-list"></ul>
+        </section>
+
+        <p id="loading-error" class="error hidden"></p>
+      </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+flask
+pypdf
+python-docx
+pandas
+openpyxl
+xlrd
+beautifulsoup4
+python-pptx
+tqdm
+pytest
